@@ -7924,6 +7924,10 @@
       "baseline": "4.1.3",
       "port-version": 8
     },
+    "winpixeventruntime": {
+      "baseline": "1.0.220810001",
+      "port-version": 0
+    },
     "winpty": {
       "baseline": "0.4.3",
       "port-version": 0
