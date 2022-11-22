@@ -1,13 +1,14 @@
+vcpkg_minimum_required(VERSION 2022-10-12) # for ${VERSION}
 vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
 
 vcpkg_download_distfile(ARCHIVE
-    URLS "https://www.nuget.org/api/v2/package/WinPixEventRuntime/1.0.220810001"
-    FILENAME "winpixeventruntime.1.0.220810001.zip"
+    URLS "https://www.nuget.org/api/v2/package/WinPixEventRuntime/${VERSION}"
+    FILENAME "winpixeventruntime.${VERSION}.zip"
     SHA512 f33d55a8bb731e404370f75756fd41470b5c4eda12f18f5642cdda8d6bde054ea7aa4e78b6074a0fcb707bd5f026ec75d0245bb2328ec9f93fdfaffde4fdcf09
 )
 
-vcpkg_extract_source_archive_ex(
-    OUT_SOURCE_PATH PACKAGE_PATH
+vcpkg_extract_source_archive(
+    PACKAGE_PATH
     ARCHIVE ${ARCHIVE}
     NO_REMOVE_ONE_LEVEL
 )
